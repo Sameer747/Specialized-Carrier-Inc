@@ -1,0 +1,35 @@
+{
+    "entries": [
+      {
+        "id": "e1",
+        "name": "John Doe",
+        "truck_id": "TRK-1001",
+        "date": "2025-05-19"
+      },
+      {
+        "id": "e2",
+        "name": "Alice Smith",
+        "truck_id": "TRK-1002",
+        "date": "2025-06-02"
+      },
+      {
+        "id": "e3",
+        "name": "Bob Johnson",
+        "truck_id": "TRK-1003",
+        "date": "2025-06-05"
+      },
+      {
+        "id": "e4",
+        "name": "Carol King",
+        "truck_id": "TRK-1004",
+        "date": "2025-07-10"
+      },
+      {
+        "id": "e5",
+        "name": "David Lee",
+        "truck_id": "TRK-1005",
+        "date": "2025-07-11"
+      }
+    ]
+  }
+  

@@ -1,0 +1,40 @@
+{
+    "users": [
+      {
+        "id": "u1",
+        "name": "John Doe",
+        "phone": "950-668-856",
+        "truck_id": "TRK-1001",
+        "avatar_url": "https://i.pravatar.cc/100?img=1"
+      },
+      {
+        "id": "u2",
+        "name": "Alice Smith",
+        "phone": "987-799-922",
+        "truck_id": "TRK-1002",
+        "avatar_url": "https://i.pravatar.cc/100?img=2"
+      },
+      {
+        "id": "u3",
+        "name": "Bob Johnson",
+        "phone": "973-311-111",
+        "truck_id": "TRK-1003",
+        "avatar_url": "https://i.pravatar.cc/100?img=3"
+      },
+      {
+        "id": "u4",
+        "name": "Carol King",
+        "phone": "994-422-222",
+        "truck_id": "TRK-1004",
+        "avatar_url": "https://i.pravatar.cc/100?img=4"
+      },
+      {
+        "id": "u5",
+        "name": "David Lee",
+        "phone": "961-233-445",
+        "truck_id": "TRK-1005",
+        "avatar_url": "https://i.pravatar.cc/100?img=5"
+      }
+    ]
+  }
+  
