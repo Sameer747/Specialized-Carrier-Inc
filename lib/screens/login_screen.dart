@@ -18,7 +18,9 @@ class LoginScreen extends StatelessWidget {
               // color: Colors.red,
               width: 50.w,
               height: 100.h,
-              child: Center(child: Image.asset("images/logo.png", scale: 1.2)),
+              child: Center(
+                child: Image.asset("assets/images/logo.png", scale: 1.2),
+              ),
             ),
           ),
           // divider

@@ -23,7 +23,7 @@ class AllUsersTable extends StatelessWidget {
         "phone": "95 66 8856",
         "address": "Dummy Street 101",
         "truckId": "100568",
-        "image": "images/user.jpg", // Make sure this exists
+        "image": "assets/images/user.jpg", // Make sure this exists
       };
     });
     return Container(

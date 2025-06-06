@@ -100,7 +100,7 @@ class SettingsScreen extends StatelessWidget {
                       child: AspectRatio(
                         aspectRatio: 1, // optional: square image
                         child: Image.asset(
-                          "images/user.jpg",
+                          "assets/images/user.jpg",
                           fit: BoxFit
                               .cover, // important for borderRadius to apply
                         ),

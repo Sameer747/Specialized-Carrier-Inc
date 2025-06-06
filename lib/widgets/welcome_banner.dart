@@ -136,7 +136,7 @@ class WelcomeBanner extends StatelessWidget {
                         ),
                         const SizedBox(width: 8),
                         Image.asset(
-                          'images/happy.png', // ✅ Path must be correct
+                          'assets/images/happy.png', // ✅ Path must be correct
                           height: 12.h, // ✅ Not too big, not too small
                           fit: BoxFit.contain, // ✅ Prevents distortion
                           filterQuality:
@@ -154,7 +154,7 @@ class WelcomeBanner extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.bottomRight,
                     child: Image.asset(
-                      'images/dart.png', // ✅ Path must be correct
+                      'assets/images/dart.png', // ✅ Path must be correct
                       height: 18.h, // ✅ Not too big, not too small
                       fit: BoxFit.contain, // ✅ Prevents distortion
                       filterQuality: FilterQuality.high, // ✅ Sharp rendering

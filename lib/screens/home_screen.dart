@@ -211,84 +211,79 @@ class HomeScreen extends StatelessWidget {
       body: Row(
         children: [
           // Sidebar
-          SingleChildScrollView(
-            child: Container(
-              width: 25.w,
-              color: Colors.white70,
-              child: Padding(
-                padding: EdgeInsets.only(left: 3.w, top: 2.h),
-                child: Column(
-                  spacing: 3.h,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset('images/homepage_logo.png'),
-                    Text(
-                      "ADMIN DASHBOARD",
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        color: const Color(0xfff5A6A85),
-                      ),
+          Container(
+            width: 25.w,
+            color: Colors.white70,
+            child: Padding(
+              padding: EdgeInsets.only(left: 3.w, top: 2.h),
+              child: Column(
+                spacing: 3.h,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/images/homepage_logo.png'),
+                  Text(
+                    "ADMIN DASHBOARD",
+                    style: TextStyle(
+                      fontSize: 12.sp,
+                      color: const Color(0xfff5A6A85),
                     ),
-                    RoundedTextButton(
-                      color: const Color(0xfffFF004D),
-                      imagePath: "images/Vector.png",
-                      title: "Main Screen",
-                      isSelected:
-                          navProvider.currentScreen == ScreenType.dashboard,
-                      onTap: () {
-                        navProvider.changeScreen(ScreenType.dashboard);
-                      },
+                  ),
+                  RoundedTextButton(
+                    color: const Color(0xfffFF004D),
+                    imagePath: "assets/images/Vector.png",
+                    title: "Main Screen",
+                    isSelected:
+                        navProvider.currentScreen == ScreenType.dashboard,
+                    onTap: () {
+                      navProvider.changeScreen(ScreenType.dashboard);
+                    },
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 6.w),
+                    child: Divider(),
+                  ),
+                  Text(
+                    "NAVIGATION",
+                    style: TextStyle(
+                      fontSize: 12.sp,
+                      color: const Color(0xfff5A6A85),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 6.w),
-                      child: Divider(),
-                    ),
-                    Text(
-                      "NAVIGATION",
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        color: const Color(0xfff5A6A85),
-                      ),
-                    ),
+                  ),
 
-                    // Navigation Buttons
-                    CustomTextButton(
-                      color: Color(0xfff5A6A85),
-                      imagePath: "images/total_entries.png",
-                      title: "Total Entries",
-                      isSelected:
-                          navProvider.currentScreen == ScreenType.totalEntries,
-                      onTap: () =>
-                          navProvider.changeScreen(ScreenType.totalEntries),
-                    ),
-                    CustomTextButton(
-                      color: Color(0xfff5A6A85),
-                      imagePath: "images/total_entries.png",
-                      title: "Add Users",
-                      isSelected:
-                          navProvider.currentScreen == ScreenType.addUser,
-                      onTap: () => navProvider.changeScreen(ScreenType.addUser),
-                    ),
-                    CustomTextButton(
-                      color: Color(0xfff5A6A85),
-                      imagePath: "images/total_entries.png",
-                      title: "Users List",
-                      isSelected:
-                          navProvider.currentScreen == ScreenType.userList,
-                      onTap: () =>
-                          navProvider.changeScreen(ScreenType.userList),
-                    ),
-                    CustomTextButton(
-                      color: Color(0xfff5A6A85),
-                      imagePath: "images/total_entries.png",
-                      title: "Settings",
-                      isSelected:
-                          navProvider.currentScreen == ScreenType.settings,
-                      onTap: () =>
-                          navProvider.changeScreen(ScreenType.settings),
-                    ),
-                  ],
-                ),
+                  // Navigation Buttons
+                  CustomTextButton(
+                    color: Color(0xfff5A6A85),
+                    imagePath: "assets/images/total_entries.png",
+                    title: "Total Entries",
+                    isSelected:
+                        navProvider.currentScreen == ScreenType.totalEntries,
+                    onTap: () =>
+                        navProvider.changeScreen(ScreenType.totalEntries),
+                  ),
+                  CustomTextButton(
+                    color: Color(0xfff5A6A85),
+                    imagePath: "assets/images/total_entries.png",
+                    title: "Add Users",
+                    isSelected: navProvider.currentScreen == ScreenType.addUser,
+                    onTap: () => navProvider.changeScreen(ScreenType.addUser),
+                  ),
+                  CustomTextButton(
+                    color: Color(0xfff5A6A85),
+                    imagePath: "assets/images/total_entries.png",
+                    title: "Users List",
+                    isSelected:
+                        navProvider.currentScreen == ScreenType.userList,
+                    onTap: () => navProvider.changeScreen(ScreenType.userList),
+                  ),
+                  CustomTextButton(
+                    color: Color(0xfff5A6A85),
+                    imagePath: "assets/images/total_entries.png",
+                    title: "Settings",
+                    isSelected:
+                        navProvider.currentScreen == ScreenType.settings,
+                    onTap: () => navProvider.changeScreen(ScreenType.settings),
+                  ),
+                ],
               ),
             ),
           ),
@@ -313,7 +308,7 @@ class HomeScreen extends StatelessWidget {
                             TextStyle(color: Color(0xfffADADAD)),
                           ),
                           hintText: "Search...",
-                          leading: Image.asset("images/search.png"),
+                          leading: Image.asset("assets/images/search.png"),
                           shadowColor: WidgetStatePropertyAll(
                             Colors.transparent,
                           ),
@@ -366,7 +361,7 @@ class HomeScreen extends StatelessWidget {
                               child: CircleAvatar(
                                 radius: 2.5.h,
                                 backgroundImage: AssetImage(
-                                  'images/circle_avatar.png',
+                                  'assets/images/circle_avatar.png',
                                 ), // or use NetworkImage
                               ),
                             ),

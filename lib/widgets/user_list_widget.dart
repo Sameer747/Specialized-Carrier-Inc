@@ -11,25 +11,26 @@ class UsersListWidget extends StatelessWidget {
         "name": "John Doe",
         "number": "95 66 8856",
         "truckId": "100568",
-        "image": "images/user.jpg", // Make sure this image exists in assets
+        "image":
+            "assets/images/user.jpg", // Make sure this image exists in assets
       },
       {
         "name": "John Doe",
         "number": "95 66 8856",
         "truckId": "100568",
-        "image": "images/user.jpg",
+        "image": "assets/images/user.jpg",
       },
       {
         "name": "John Doe",
         "number": "95 66 8856",
         "truckId": "100568",
-        "image": "images/user.jpg",
+        "image": "assets/images/user.jpg",
       },
       {
         "name": "John Doe",
         "number": "95 66 8856",
         "truckId": "100568",
-        "image": "images/user.jpg",
+        "image": "assets/images/user.jpg",
       },
     ];
 
