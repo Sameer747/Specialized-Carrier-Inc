@@ -68,7 +68,7 @@ class WelcomeBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 20.h,
-      width: double.infinity,
+      width: 100.w,
 
       margin: EdgeInsets.symmetric(vertical: 2.h),
       // padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
@@ -110,39 +110,55 @@ class WelcomeBanner extends StatelessWidget {
               children: [
                 // Left Text
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  // mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Welcome,',
-                      style: TextStyle(fontSize: 12.sp, color: Colors.black87),
+                    Transform.translate(
+                      offset: Offset(0, 10),
+                      child: Text(
+                        'Welcome,',
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          color: Colors.black87,
+                        ),
+                      ),
                     ),
-                    SizedBox(height: 0.5.h),
+                    // SizedBox(height: 0.5.h),
                     Row(
                       children: [
                         Text(
                           'Mr. John Doe',
                           style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 18.sp,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
                         ),
                         const SizedBox(width: 8),
-                        const Text('👏'),
+                        Image.asset(
+                          'images/happy.png', // ✅ Path must be correct
+                          height: 12.h, // ✅ Not too big, not too small
+                          fit: BoxFit.contain, // ✅ Prevents distortion
+                          filterQuality:
+                              FilterQuality.high, // ✅ Sharp rendering
+                        ),
+                        // Text('👏', style: TextStyle(fontSize: 20.sp)),
                       ],
                     ),
                   ],
                 ),
 
                 // Right: Dart Image aligned bottom
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Image.asset(
-                    'images/dart.png', // ✅ Path must be correct
-                    height: 18.h, // ✅ Not too big, not too small
-                    fit: BoxFit.contain, // ✅ Prevents distortion
-                    filterQuality: FilterQuality.high, // ✅ Sharp rendering
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 2.w),
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Image.asset(
+                      'images/dart.png', // ✅ Path must be correct
+                      height: 18.h, // ✅ Not too big, not too small
+                      fit: BoxFit.contain, // ✅ Prevents distortion
+                      filterQuality: FilterQuality.high, // ✅ Sharp rendering
+                    ),
                   ),
                 ),
               ],
