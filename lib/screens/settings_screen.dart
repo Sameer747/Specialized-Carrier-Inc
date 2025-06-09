@@ -144,6 +144,7 @@
 //     );
 //   }
 // }
+
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -220,8 +221,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
       child: SafeArea(
         child: Container(
           width: double.infinity,
-          margin: EdgeInsets.symmetric(horizontal: 3.w, vertical: 3.h),
-          padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 3.h),
+          margin: EdgeInsets.symmetric(horizontal: 0.w, vertical: 3.h),
+          padding: EdgeInsets.symmetric(horizontal: 1.w, vertical: 3.h),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(3.w),
