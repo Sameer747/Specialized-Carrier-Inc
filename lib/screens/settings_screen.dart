@@ -1,21 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:sizer/sizer.dart';
-
-// class SettingsScreen extends StatelessWidget {
-//   const SettingsScreen({super.key});
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Container(
-//         height: 100.h,
-//         width: double.infinity,
-//         decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-//         child: Card(),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -24,93 +6,105 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      margin: EdgeInsets.symmetric(horizontal: 3.w, vertical: 3.h),
-      padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 3.h),
+    return SingleChildScrollView(
+      child: SafeArea(
+        child: Container(
+          width: double.infinity,
+          margin: EdgeInsets.symmetric(horizontal: 3.w, vertical: 3.h),
+          padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 3.h),
 
-      // padding: EdgeInsets.all(3.w),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(3.w),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 6,
-            offset: const Offset(0, 3),
-          ),
-        ],
-      ),
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Title
-            Text(
-              "Admin Details",
-              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 1.h),
-
-            // Yellow Subheading
-            Text(
-              "User Info:",
-              style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w600,
-                color: const Color(0xFFFFB800),
+          // padding: EdgeInsets.all(3.w),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(3.w),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 6,
+                offset: const Offset(0, 3),
               ),
-            ),
-            Divider(),
-            SizedBox(height: 2.h),
-
-            // Row: Info + Image
-            Row(
+            ],
+          ),
+          child: SingleChildScrollView(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Info Column
-                Expanded(
-                  flex: 6,
-                  child: Column(
-                    children: [
-                      _infoRow(Icons.person, "Name:", "John Doe", bold: true),
-                      _infoRow(Icons.badge, "ID#", "458799"),
-                      _infoRow(Icons.phone, "Number#", "(0) 955 55 765"),
-                      _infoRow(
-                        Icons.email_outlined,
-                        "Email ID:",
-                        "johndoe@gmail.com",
-                        bold: true,
-                      ),
-                      _infoRow(Icons.lock, "Password", "●●●●●●●"),
-                    ],
+                // Title
+                Text(
+                  "Admin Details",
+                  style: TextStyle(
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 5.w),
+                SizedBox(height: 1.h),
 
-                // Profile Image
-                Expanded(
-                  flex: 4,
-                  child: Transform.translate(
-                    offset: Offset(0, -5.h),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(
-                        3.w,
-                      ), // responsive corner
-                      child: AspectRatio(
-                        aspectRatio: 1, // optional: square image
-                        child: Image.asset(
-                          "assets/images/user.jpg",
-                          fit: BoxFit
-                              .cover, // important for borderRadius to apply
+                // Yellow Subheading
+                Text(
+                  "User Info:",
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFFFFB800),
+                  ),
+                ),
+                Divider(),
+                SizedBox(height: 2.h),
+
+                // Row: Info + Image
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Info Column
+                    Expanded(
+                      flex: 6,
+                      child: Column(
+                        children: [
+                          _infoRow(
+                            Icons.person,
+                            "Name:",
+                            "John Doe",
+                            bold: true,
+                          ),
+                          _infoRow(Icons.badge, "ID#", "458799"),
+                          _infoRow(Icons.phone, "Number#", "(0) 955 55 765"),
+                          _infoRow(
+                            Icons.email_outlined,
+                            "Email ID:",
+                            "johndoe@gmail.com",
+                            bold: true,
+                          ),
+                          _infoRow(Icons.lock, "Password", "●●●●●●●"),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 5.w),
+
+                    // Profile Image
+                    Expanded(
+                      flex: 4,
+                      child: Transform.translate(
+                        offset: Offset(0, -5.h),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(
+                            3.w,
+                          ), // responsive corner
+                          child: AspectRatio(
+                            aspectRatio: 1, // optional: square image
+                            child: Image.asset(
+                              "assets/images/user.jpg",
+                              fit: BoxFit
+                                  .cover, // important for borderRadius to apply
+                            ),
+                          ),
                         ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );

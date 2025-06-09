@@ -10,22 +10,24 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            // welcome banner
-            WelcomeBanner(),
-            Row(
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              spacing: 1.w,
-              children: [
-                TotalEntriesWidget(width: 36.w),
-                UsersListWidget(width: 36.w),
-              ],
-            ),
-          ],
+        child: SafeArea(
+          child: Column(
+            children: [
+              // welcome banner
+              WelcomeBanner(),
+              Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 1.w,
+                children: [
+                  TotalEntriesWidget(width: 36.w),
+                  UsersListWidget(width: 36.w),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -69,7 +69,6 @@ class WelcomeBanner extends StatelessWidget {
     return Container(
       height: 20.h,
       width: 100.w,
-
       margin: EdgeInsets.symmetric(vertical: 2.h),
       // padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
       decoration: BoxDecoration(

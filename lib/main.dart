@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:specialized_carrier_inc_admin/providers/month_year_provider.dart';
 import 'package:specialized_carrier_inc_admin/providers/navigation_provider.dart';
+import 'package:specialized_carrier_inc_admin/providers/view_toggle_provider.dart';
 import 'package:specialized_carrier_inc_admin/screens/login_screen.dart';
 
 void main() async {
@@ -28,6 +29,7 @@ class SpecializedCarrierIncAdminApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => NavigationProvider()),
         ChangeNotifierProvider(create: (context) => MonthYearProvider()),
+        ChangeNotifierProvider(create: (context) => ViewToggleProvider()),
       ],
       child: Sizer(
         builder: (context, orientation, screenType) {
