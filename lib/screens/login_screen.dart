@@ -98,24 +98,24 @@ class LoginScreen extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
-                        margin: EdgeInsets.symmetric(horizontal: 2.w),
-                        height: 6.h,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Color(0xfffFF004D),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: Center(
-                          child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomeScreen(),
-                                ),
-                              );
-                            },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomeScreen(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          margin: EdgeInsets.symmetric(horizontal: 2.w),
+                          height: 6.h,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: Color(0xfffFF004D),
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Center(
                             child: Text(
                               "Login",
                               style: TextStyle(
