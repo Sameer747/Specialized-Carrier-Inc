@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
+import 'package:specialized_carrier_inc_admin/providers/month_year_provider.dart';
 import 'package:specialized_carrier_inc_admin/providers/navigation_provider.dart';
-import 'package:specialized_carrier_inc_admin/screens/home_screen.dart';
 import 'package:specialized_carrier_inc_admin/screens/login_screen.dart';
 
 void main() async {
@@ -27,6 +27,7 @@ class SpecializedCarrierIncAdminApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => NavigationProvider()),
+        ChangeNotifierProvider(create: (context) => MonthYearProvider()),
       ],
       child: Sizer(
         builder: (context, orientation, screenType) {
@@ -36,10 +37,10 @@ class SpecializedCarrierIncAdminApp extends StatelessWidget {
             theme: ThemeData(
               textTheme: GoogleFonts.latoTextTheme(Theme.of(context).textTheme),
             ),
-            // home: LoginScreen(),
             home: Builder(
               builder: (context) {
-                if (MediaQuery.sizeOf(context).width >= 600 &&
+                // for tablet
+                if (MediaQuery.sizeOf(context).width >= 768 &&
                     MediaQuery.sizeOf(context).width <= 1280) {
                   return LoginScreen();
                 } else {

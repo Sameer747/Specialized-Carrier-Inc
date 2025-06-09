@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class UsersListWidget extends StatelessWidget {
-  const UsersListWidget({super.key});
+  final double width;
+  const UsersListWidget({super.key, required this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +36,7 @@ class UsersListWidget extends StatelessWidget {
     ];
 
     return Container(
-      // height: 50.h,
-      width: 35.w,
+      width: width,
       padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
       decoration: BoxDecoration(
         color: Colors.white,
