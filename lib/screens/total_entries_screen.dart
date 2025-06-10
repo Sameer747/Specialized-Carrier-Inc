@@ -798,12 +798,14 @@ class TotalEntriesScreen extends StatelessWidget {
         color: const Color(0xFFE3E7EF),
         borderRadius: BorderRadius.circular(50),
       ),
-      child: Text(
-        'View Sheet',
-        style: TextStyle(
-          fontSize: 12.sp,
-          fontWeight: FontWeight.w500,
-          color: Colors.black87,
+      child: Center(
+        child: Text(
+          'View Sheet',
+          style: TextStyle(
+            fontSize: 12.sp,
+            fontWeight: FontWeight.w500,
+            color: Colors.black87,
+          ),
         ),
       ),
     );
